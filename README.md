@@ -17,8 +17,7 @@ Once the application is running, you can interact with the 3D model viewer:
 Use the mouse to rotate and zoom the camera around the 3D model.
 Use the UI control panel to adjust various parameters such as wireframe mode, color transitions, and height range.
 Features
-Display a 3D model of the Porsche 911.
-Apply a custom shader to the model to visualize it with dynamic colors based on height.
+A custom shader to the porsche 911 to visualize it with dynamic colors based on height.
 Allow users to adjust parameters such as wireframe mode, color transitions, and height range through a UI control panel.
 Troubleshooting
 If you encounter any issues while setting up or running the project, please try the following:
