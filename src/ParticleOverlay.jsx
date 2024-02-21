@@ -4,9 +4,10 @@ import { MeshSurfaceSampler } from "three/addons/math/MeshSurfaceSampler.js";
 import { BufferGeometry, PointsMaterial, Points } from "three";
 import { useMemo } from "react";
 
-function ParticleOverlay({ meshData, particleCount = 1000 }) {
-  const sampler = useMemo(() => new MeshSurfaceSampler(meshData).build());
+function ParticleOverlay({ meshData}) {
+  const sampler = new MeshSurfaceSampler(meshData).build();
   const vertices = [];
+   particleCount = 1000 
   const tempPosition = new THREE.Vector3();
   const pointsGeometry = new BufferGeometry();
   for (let i = 0; i < particleCount; i++) {
