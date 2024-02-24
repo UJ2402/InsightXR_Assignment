@@ -15,23 +15,19 @@ import { MeshSurfaceSampler } from "three/addons/math/MeshSurfaceSampler.js";
 import ParticleOverlay from "./ParticleOverlay";
 import { useControls } from "leva";
 
-
-
-  
 export default function Experience() {
-    const { position, scale } = useControls({
-        position: {
-          value: { x: 0, y: 0, z: 0 },
-          step: 0.01,
-        },
-        scale: {
-          value: 1,
-          min: 0.1,
-          max: 3,
-          step: 0.01,
-        },
-      });
-  
+  const { position, scale } = useControls({
+    position: {
+      value: { x: 0, y: 0, z: 0 },
+      step: 0.01,
+    },
+    scale: {
+      value: 1,
+      min: 0.1,
+      max: 3,
+      step: 0.01,
+    },
+  });
 
   return (
     <>
@@ -50,10 +46,13 @@ export default function Experience() {
       >
         <planeGeometry />
         <meshStandardMaterial side={2} color="black" />
-      </mesh> 
+      </mesh>
 
       <Suspense>
-        <Porsche position={[position.x, position.y, position.z]} scale={scale}/>
+        <Porsche
+          position={[position.x, position.y, position.z]}
+          scale={scale}
+        />
       </Suspense>
     </>
   );
